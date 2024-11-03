@@ -8,23 +8,24 @@ namespace jQuery_File_Upload.MVC5
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            bundles.Add(new Bundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js" ));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+            bundles.Add(new Bundle("~/bundles/jqueryui").Include(
          "~/Scripts/jquery-ui-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+            bundles.Add(new Bundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            bundles.Add(new Bundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+            bundles.Add(new Bundle("~/bundles/bootstrap").Include(
+                "~/Scripts/bootstrap.bundle.js",
+                "~/Scripts/respond.js"));
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -38,7 +39,7 @@ namespace jQuery_File_Upload.MVC5
                        "~/Content/blueimp-gallery2/css/blueimp-gallery-indicator.css"
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/jQuery-File-Upload").Include(
+            bundles.Add(new Bundle("~/bundles/jQuery-File-Upload").Include(
                      //<!-- The Templates plugin is included to render the upload/download listings -->
                      "~/Scripts/jQuery.FileUpload/vendor/jquery.ui.widget.js",
                        "~/Scripts/jQuery.FileUpload/tmpl.min.js",
@@ -70,7 +71,7 @@ namespace jQuery_File_Upload.MVC5
 "~/Scripts/blueimp-gallery2/js/jquery.blueimp-gallery.js"
 
 ));
-            bundles.Add(new ScriptBundle("~/bundles/Blueimp-Gallerry2").Include(//Blueimp Gallery 2 
+            bundles.Add(new Bundle("~/bundles/Blueimp-Gallerry2").Include(//Blueimp Gallery 2 
 "~/Scripts/blueimp-gallery2/js/blueimp-gallery.js",
 "~/Scripts/blueimp-gallery2/js/blueimp-gallery-video.js",
 "~/Scripts/blueimp-gallery2/js/blueimp-gallery-indicator.js",
