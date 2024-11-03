@@ -23,7 +23,7 @@ namespace jQuery_File_Upload.MVC5
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
-                "~/Scripts/bootstrap.bundle.js",
+                "~/Scripts/bootstrap.js",
                 "~/Scripts/respond.js"));
 
 
